@@ -1,0 +1,50 @@
+<html>
+	<body>
+		<style>
+			* {
+				font-size: 20px;
+			}
+			
+			#box {
+				float: right;
+				width: 100%;
+				height: 300px;
+				background-color: #000;
+				margin-top: 30px;
+			}
+			
+			#box:hover {
+				background-color: #F00;
+			}
+		</style>
+	
+		
+		<div>
+			<button onclick="updateCounterModified()">Click me</button>
+			<span>Counter: <span id="counter-text"></span></span>
+		</div>
+		
+		<div id="box" style=""></div>
+		
+		<script>
+			
+			function updateCounter(){
+				let counter = 0;
+				
+				while(counter++ < 500000){
+					document.getElementById('counter-text').innerText = counter.toString();
+				}
+			}
+			
+			function updateCounterModified(){
+				let counter = 0;
+				
+				while(counter++ < 500000){
+					(function(counter){
+						setTimeout(() => document.getElementById('counter-text').innerText = counter.toString());
+					})(counter);
+				}
+			}
+		</script>
+	</body>
+</html>
