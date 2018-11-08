@@ -77,9 +77,9 @@ sudo service rabbitmq-server restart
 sudo rabbitmqctl add_user demo demo
 sudo rabbitmqctl set_user_tags demo administrator
 sudo rabbitmqctl delete_user guest
+sudo rabbitmqctl delete_vhost /
 sudo rabbitmqctl add_vhost live
 sudo rabbitmqctl add_vhost development
-sudo rabbitmqctl set_permissions -p / demo ".*" ".*" ".*"
 sudo rabbitmqctl set_permissions -p live demo ".*" ".*" ".*"
 sudo rabbitmqctl set_permissions -p development demo ".*" ".*" ".*"
 

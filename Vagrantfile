@@ -22,5 +22,6 @@ Vagrant.configure("2") do |config|
 
   config.vm.synced_folder "./public", "/var/www/sites/public", create: true, group: "www-data", owner: "www-data", id: 'sites-public'
   config.vm.synced_folder "./src", "/var/www/sites/src", create: true, group: "www-data", owner: "www-data", id: 'sites-src'
+  config.vm.synced_folder "./vendor", "/var/www/sites/vendor", create: true, group: "www-data", owner: "www-data", id: 'sites-vendor'
   config.vm.synced_folder "./config", "/var/www/scripts/config", create: true, group: "www-data", owner: "www-data", id: 'init-scripts'
 end

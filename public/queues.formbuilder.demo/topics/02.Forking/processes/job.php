@@ -1,5 +1,7 @@
 <?php
 
+/** @var int $childId */
+
 $secondsTotal = $secondsLeft = rand(4, 15);
 echo "[W$childId] Doing my job, it's taking $secondsTotal seconds... \r\n";
 
